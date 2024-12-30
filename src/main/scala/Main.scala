@@ -1,8 +1,6 @@
-import jsonp.Const
+import jsonp.{JBool, JNumber, JObject}
 
 @main
-def hello(): Unit =
-  println(Const.greeting)
-  println(msg)
-
-def msg = "I was compiled by Scala 3. :)"
+def main(): Unit =
+  val obj = JObject(List(("foo", JNumber(42, List(), BigInt(0))), ("bar", JBool(true))))
+  println(obj)
